@@ -28,7 +28,11 @@ We compute precision and recall by first defining matching criteria. For example
 Exact match: True Positives = 1 (Microsoft Corp., the only exact match), False Positives =3 (CEO, today, and Steve, which isn't an exact match), False Negatives = 2 (Steve Ballmer and Windows 7)
 Precision = True Positives / (True Positives + False Positives) = 1/(1+3) = 0.25.
 
+## Important note :
+When I get the output from the 2 NER models, I considered only the entities that have labels of "ORG" , "PER" , "LOC" ,"GPE"  , and I treat  "LOC" or "GPE" as "LOC"
+
 ## Models scores
 After passing our samples to the 2 models , we get the named entities for every model along with having the ground truth , so I iterated over every sample and copmared the annotations with the models predictions , then I got the total true positives , false positive and False negatives , then I calculated the scores which are the following :
 - For the statistical model : Precision: 0.69, Recall: 0.63 ,f1_score: 0.662
 - for the transformer-based model :Precision: 0.79, Recall: 0.72, f1_score: 0.75
+
