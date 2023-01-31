@@ -10,7 +10,7 @@
 - re for matching regular expressions
 - spacy to import statistical and transformer-based NER models
 ## Steps done to preprocess the data 
-1. Getting clean text from every <p> tag without any further tags, hence we can pass it to the models to get the Named entities
+1. Getting clean text from every p tag without any further tags, hence we can pass it to the models to get the Named entities
 2. Getting the sentences with their NER tags
 3. We can get the entities for every sentence from the output of the last step
 4. Now we have the ground truth entities and the text itself , then we have to pass this pure text into the 2 NER models we have
